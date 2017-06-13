@@ -1,0 +1,10 @@
+<div>
+<p>Unesite korisničko ime i lozinku</p>
+
+<form #loginform="ngForm" (ngSubmit)="onSubmit(loginform.value)">
+  Username: <input type="text" name="uname" ngModel required #uname="ngModel"><br>
+  Password: <input type="Password" name="pass" ngModel required #pass="ngModel"><br>
+  <input type="submit" value="Submit">
+</form>
+<p *ngIf="greskaPrijave">{{greskaPrijave}}</p>
+</div>
